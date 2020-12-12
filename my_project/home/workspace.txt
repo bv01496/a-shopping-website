@@ -1,0 +1,7 @@
+def alter_cart_prod(request):
+    cartid = request.method.GET['inc_prod']
+    print(cartid)
+    cart = Orders.objects.get(id = cartid)
+    cart.quantity += 1
+    cart.save()
+    return JsonResponse({'status':'success'})
