@@ -8,10 +8,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin,UserPassesTestMixin
 from django.views.generic import UpdateView
 from .forms import UserRegistrationForm ,ContactForm
 from django.contrib.auth.forms import AuthenticationForm
-# from products.models import Products
 from products.models import Tags
 
-# Create your views here.
 def home(request):
     signupform = UserRegistrationForm()
     form = AuthenticationForm()
